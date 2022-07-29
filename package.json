@@ -3,17 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.0",
+    "jquery": "^3.6.0",
+    "lucide-react": "^0.83.0",
+    "popper.js": "^1.16.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "serve": "^14.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_VIEW_MINI_BLOG_BACKEND_URL=\"http://localhost:8000/posts\" REACT_APP_MANAGE_MINI_BLOG_BACKEND_URL=\"http://localhost:8000/posts\" react-scripts start",
+    "build": "REACT_APP_VIEW_MINI_BLOG_BACKEND_URL=\"http://localhost:8000/posts\" REACT_APP_MANAGE_MINI_BLOG_BACKEND_URL=\"http://localhost:8000/posts\" react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

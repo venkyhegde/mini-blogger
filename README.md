@@ -68,3 +68,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+## How to Run locally
+---
+### Step 1.  Start Backend service
+
+###  Using  Backend json-server 
+
+Use the Json server to quickly spin up backend server backed by `db/db.json` file. Use below command to start the json server from project's root directory. 
+
+```
+npx json-server --watch db/db.json --port 8000
+```
+
+Executing this command will start the Json server, on successful setup it should print Resources URL on console. 
+
+```cmd
+22-07-27T23:32 mini-blogger$ npx json-server --watch db/db.json --port 8000
+
+  \{^_^}/ hi!
+
+  Loading db/db.json
+  Done
+
+  Resources
+  http://localhost:8000/posts
+
+  Home
+  http://localhost:8000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+```
+### Step 2:Provide backend service URLs thorugh environment variables. 
+Provide this URL through an environment variable with name - `REACT_APP_VIEW_MINI_BLOG_BACKEND_URL` and `REACT_APP_MANAGE_MINI_BLOG_BACKEND_URL` . Reason for requiring two separate environment variable as it's common practice to have different backend micro services for managing and viewing the resources. In that case we can provide separate backend URLs through these. In case of Json server both URLs are same so 
+
+> Note: Don't supply forward slash `/` at the end of URL. 
+
+
+### Step 3: Start this UI application.
+Start this application using one of appropriate command, refer above section. 
+
+
+### Icons used in this application
+https://lucide.dev/docs/lucide-react
