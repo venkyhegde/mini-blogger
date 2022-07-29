@@ -16,7 +16,7 @@ const PostsList = ({ posts, handleFilter, title, filterString, handleDelete }) =
         console.log(`getting details for the post ${id}`);
         // Get post
         setTimeout(() => {
-            fetch(REACT_APP_VIEW_MINI_BLOG_BACKEND_URL+"/" + id).then(res => {
+            fetch(REACT_APP_VIEW_MINI_BLOG_BACKEND_URL + "/" + id).then(res => {
                 if (!res.ok) {
                     throw Error("[ERROR] " + res.url + " " + res.status + " " + res.statusText);
                 }
