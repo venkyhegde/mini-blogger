@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PostsList from "./PostsListV2";
+import PostsList from "./PostsListV3";
 import useFetchData from "./hooks/useFetchData";
 // import $ from 'jquery';
 import { Toast, ToastContainer } from 'react-bootstrap'

@@ -97,51 +97,44 @@ const PostsList = ({ posts, handleFilter, title, filterString, handleDelete }) =
                                                     </div>
                                                     <div className="modal-body post-body">
                                                         <div className="">
-                                                            <table className="table table-borderless">
-                                                                <tbody>
-                                                                    <tr className="row">
-                                                                        <td className="col-9 col-sm-9">
-                                                                            <p className="text-sm-start lh-lg"> {getPostResponse.post.body}</p>
-                                                                        </td>
-
-                                                                        <td className="col-3 col-sm-3">
-                                                                            <div className="border border-secondary border-opacity-25 w-100 p-1 bg-light bg-opacity-50">
-                                                                                <div className="table-responsive">
-                                                                                    <table className="table table-borderless w-100">
-                                                                                        <tbody>
-                                                                                            <tr className="bg-success bg-opacity-50">
-                                                                                                <td className="font-md p-0 text-center bold-font"><Users size={20}
-                                                                                                    strokeWidth={3}></Users> Authors</td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td className="font-md p-0 text-start p-1">
-                                                                                                    <ul>{getPostResponse.post.authors.map(name => <li key={name}> {name} </li>)}</ul>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr className="bg-success bg-opacity-50">
-                                                                                                <td className="font-md p-0 text-center bold-font"><Tags size={20}
-                                                                                                    strokeWidth={3}></Tags> Tags</td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td
-                                                                                                    className="font-md p-0 text-start p-1">
-                                                                                                    <div>
-                                                                                                        {
-                                                                                                            getPostResponse.post.tags.map((tag, index) => (
-                                                                                                                <button className="btn btn-sm  rounded-0 text-wrap lh-sm tag-btn m-1" key={index}><a href="#" className=" text-secondary font-md">#{tag}</a></button>
-                                                                                                            ))
-                                                                                                        }
-                                                                                                    </div>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                            <main>
+                                                                <aside className="border border-secondary border-opacity-25 bg-light bg-opacity-50">
+                                                                    <div className="table-responsive">
+                                                                        <table className="table table-borderless w-100">
+                                                                            <tbody>
+                                                                                <tr className="bg-success bg-opacity-50">
+                                                                                    <td className="font-md p-0 text-center bold-font"><Users size={20}
+                                                                                        strokeWidth={3}></Users> Authors</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="font-md p-0 text-start p-1">
+                                                                                        <ul>{getPostResponse.post.authors.map(name => <li key={name}> {name} </li>)}</ul>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr className="bg-success bg-opacity-50">
+                                                                                    <td className="font-md p-0 text-center bold-font"><Tags size={20}
+                                                                                        strokeWidth={3}></Tags> Tags</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        className="font-md p-0 text-start p-1">
+                                                                                        <div>
+                                                                                            {
+                                                                                                getPostResponse.post.tags.map((tag, index) => (
+                                                                                                    <button className="btn btn-sm  rounded-0 text-wrap lh-sm tag-btn m-1" key={index}><a href="#" className=" text-secondary font-md">#{tag}</a></button>
+                                                                                                ))
+                                                                                            }
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </aside>
+                                                                <article className="text-sm-start lh-lg">
+                                                                    {getPostResponse.post.body}
+                                                                </article>
+                                                            </main>
                                                             <hr />
                                                         </div>
                                                         <div className="d-flex">

@@ -141,3 +141,8 @@ code {
   --bs-btn-disabled-bg: #fffff;
   --bs-btn-disabled-border-color: #fff;
 }
+
+aside {
+  width: 30%;
+  float: right;
+}
