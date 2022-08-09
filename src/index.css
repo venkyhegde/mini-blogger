@@ -145,4 +145,5 @@ code {
 aside {
   width: 30%;
   float: right;
+  margin-left: 1em;
 }
