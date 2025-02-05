@@ -114,3 +114,14 @@ Start this application using one of appropriate command, refer above section.
 
 ### Icons used in this application
 https://lucide.dev/docs/lucide-react
+
+
+Created the basic modular React application "Mini Blogger".
+Final works are pending.
+- [ ] Read URLs from env variables. 
+- [ ] Clean up the readme. 
+- [ ] Update the readme.
+URL 1 - http://localhost:8000/posts 
+URL 2 - http://localhost:8000/posts/ 
+URL 3 - http://localhost:8000/posts/ 
+URL 4 - http://localhost:8000/posts/ 
